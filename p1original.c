@@ -17,7 +17,8 @@ void output(float a, float b, float c)
   printf("The area of the traingle with base %f and height %f is %f", a, b, c);
 }
 
-int main(){
+int main()
+{
   float a,b,c;
   input(&a,&b);
   find_area(a,b,&c);
