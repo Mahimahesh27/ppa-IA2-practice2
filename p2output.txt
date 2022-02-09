@@ -1,1 +1,8 @@
+ gcc -g p2original.c
+./a.out
+Enter the length of a side: 5
+Enter the length of a side: 64
+Enter the length of a side: 3
+The triangle with sides 5, 64 and 3 is a scalene triangle
+
 
