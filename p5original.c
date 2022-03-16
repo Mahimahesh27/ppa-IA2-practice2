@@ -1,36 +1,46 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
+
+int input();
+int gcd(int u, int v);
+void output(int x,int y, int result);
+
+int main()
+{
+    int a,b,ans;
+    a = input();
+    b = input();
+
+    ans = gcd(a,b);
+
+    output(a, b, ans);
+
+    return 0;
+}
 
 int input()
 {
   int a;
-  printf("enter a number\n");
+  printf("Enter a number: ");
   scanf("%d",&a);
   return a;
 }
 
-int gcd(int a,int b) 
+int gcd(int u, int v)
 {
- int t;
- while (b != 0)
- {
-   t = b;
-   b = a%b;
-   a = t;
- }
- return a;
+    int temp;
+
+    while( v != 0)
+    {
+        temp = u % v;
+        u = v;
+        v = temp;
+    }
+
+    return u;
 }
 
-void output(int a, int b, int c)
+void output(int x,int y, int result)
 {
-  printf("the gcd of %d and %d is %d\n",a,b,gcd);
-}
-
-int main()
-{
-  int a,b,c;
-  a=input();
-  b=input();
-  c=gcd(a,b);
-  output(a,b,c);
-  return 0;
+    printf("GCD of %d and %d = %d.", x, y, result);
 }

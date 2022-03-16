@@ -1,1 +1,7 @@
+gcc -g p5original.c
+ ./a.out
+Enter a number: 4
+Enter a number: 3
+GCD of 4 and 3 = 1. 
+
 
