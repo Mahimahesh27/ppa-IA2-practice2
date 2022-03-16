@@ -7,7 +7,8 @@ int input_number(){
   return n;
 }
 
-int check_composite(int n){
+int check_composite(int n)
+{
   for(int i = 2; i < n; i++){
     if(n % i == 0){
       return 1;
@@ -17,9 +18,12 @@ int check_composite(int n){
 }
 
 void output(int n, int composite){
-  if(composite){
+  if(composite)
+  {
     printf("%d is a composite number\n", n);
-  }else{
+  }
+  else
+  {
     printf("%d is not a composite number\n", n);
   }
 }
