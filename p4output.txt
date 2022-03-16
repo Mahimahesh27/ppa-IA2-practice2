@@ -1,1 +1,12 @@
+gcc -g p4original.c
+ ./a.out
+Enter no of complex number to be added
+2
+Enter complex number
+4
+6
+Enter complex number
+8
+4
+4.0+6.0i + 8.0+4.0i + 8.0+4.0i is 12.0+10.0i 
 
