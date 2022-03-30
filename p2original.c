@@ -2,37 +2,41 @@
 
 int input_side()
 {
-  int side;
-  printf("Enter the length of a side: ");
-  scanf("%d", &side);
-  return side; 
+  printf("enter the side length:\n");
+  scanf("%d",&a);
+  return a;
 }
 
-int check_scalene(int a, int b, int c)
-{ 
-  int is_scalene = (a != b ? (a != c ? (b != c ? 1 : 0) : 0) : 0);
-  return is_scalene;
-}
-
-void output(int a, int b, int c, int is_scalene){
-  if(is_scalene)
+int check_scalen(int a,int b,int c)
+{
+  int isscalen;
+  if(a!=b&&a!=c&&b!=c)
   {
-    printf("The triangle with sides %d, %d and %d is a scalene triangle\n", a, b, c);
+    isscalen=0;
   }
-  
+  return isscalen;
+}
+
+void output(int a,int b,int c,int isscalen)
+ {
+  if (isscalen==0)
+  {
+    printf("the trinagle is scalen for lengths %d.%d and 
+   %d",a,b,c);
+  }
   else
   {
-    printf("The triangle with sides %d, %d and %d is not a scalene triangle\n", a, b, c);
-  }
-}
+    printf("the triangle is not a scalen");
+  }  
+ }  
 
 int main()
 {
-  int a, b, c, is_scalene;
-  a = input_side();
-  b = input_side();
-  c = input_side();
-  is_scalene = check_scalene(a, b, c);
-  output(a, b, c, is_scalene);
+  intput a,b,c,isscalen;
+  int a=input_side();
+  int b=input_side();
+  int c=input_side();
+  isscalen=check_isscalen(a,b,c);
+  output(a,b,c,isscalen);
   return 0;
 }
